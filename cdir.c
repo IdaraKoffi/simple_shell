@@ -94,7 +94,7 @@ void cdirPrev(dataShell *data_sh)
 	getcwd(pwd, sizeof(pwd));
 	cp_pwd = _stringdup(pwd);
 
-	p_oldpwd = _getenvir("OLDPWD", data_sh->_environ);
+	p_oldpwd = _getenvir("OLDPWD", data_sh->envir);
 
 	if (p_oldpwd == NULL)
 		cp_oldpwd = cp_pwd;
@@ -109,7 +109,7 @@ void cdirPrev(dataShell *data_sh)
 	else
 		setEnvir("PWD", cp_oldpwd, data_sh);
 
-	p_pwd = _getenvir("PWD", data_sh->_environ);
+	p_pwd = _getenvir("PWD", data_sh->envir);
 
 	write(STDOUT_FILENO, p_pwd, _stringlen(p_pwd));
 	write(STDOUT_FILENO, "\n", 1);
@@ -135,7 +135,7 @@ void cdirToHome(dataShell *data_sh)
 	getcwd(pwd, sizeof(pwd));
 	p_pwd = _stringdup(pwd);
 
-	home = _getenvir("HOME", data_sh->_environ);
+	home = _getenvir("HOME", data_sh->envir);
 
 	if (home == NULL)
 	{

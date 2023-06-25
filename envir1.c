@@ -63,12 +63,12 @@ int _envir(dataShell *data_sh)
 {
 	int i, j;
 
-	for (i = 0; data_sh->_environ[i]; i++)
+	for (i = 0; data_sh->envir[i]; i++)
 	{
-		for (j = 0; data_sh->_environ[i][j]; j++)
+		for (j = 0; data_sh->envir[i][j]; j++)
 			;
 
-		write(STDOUT_FILENO, data_sh->_environ[i], j);
+		write(STDOUT_FILENO, data_sh->envir[i], j);
 		write(STDOUT_FILENO, "\n", 1);
 	}
 	data_sh->stats = 0;
