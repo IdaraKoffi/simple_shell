@@ -166,7 +166,7 @@ int checkErrorCmd(char *dir, dataShell *datash);
 int cmdExec(dataShell *datash);
 
 /* envir1.c */
-char *_getenvir(const char *name, char **_envir);
+char *_getenvir(const char *name, char **_environ);
 int _envir(dataShell *datash);
 
 /* envir2.c */

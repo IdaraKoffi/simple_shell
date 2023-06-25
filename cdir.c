@@ -32,7 +32,7 @@ void cdirDot(dataShell *data_sh)
 	{
 		cp_strtok_pwd = _stringtok(NULL, "\0");
 		if (cp_strtok_pwd != NULL)
-			revString(cp_strtok_pwd)
+			revString(cp_strtok_pwd);
 	}
 	if (cp_strtok_pwd != NULL)
 	{
@@ -94,7 +94,7 @@ void cdirPrev(dataShell *data_sh)
 	getcwd(pwd, sizeof(pwd));
 	cp_pwd = _stringdup(pwd);
 
-	p_oldpwd = _getenvir("OLDPWD", data_sh->_envir);
+	p_oldpwd = _getenvir("OLDPWD", data_sh->_environ);
 
 	if (p_oldpwd == NULL)
 		cp_oldpwd = cp_pwd;
@@ -109,10 +109,10 @@ void cdirPrev(dataShell *data_sh)
 	else
 		setEnvir("PWD", cp_oldpwd, data_sh);
 
-	p_pwd = _getenvir("PWD", data_sh->_envir);
+	p_pwd = _getenvir("PWD", data_sh->_environ);
 
 	write(STDOUT_FILENO, p_pwd, _stringlen(p_pwd));
-	wirte(STDOUT_FILENO, "\n", 1);
+	write(STDOUT_FILENO, "\n", 1);
 
 	free(cp_pwd);
 	if (p_oldpwd)
@@ -135,7 +135,7 @@ void cdirToHome(dataShell *data_sh)
 	getcwd(pwd, sizeof(pwd));
 	p_pwd = _stringdup(pwd);
 
-	home = _getenvir("HOME", data_sh->envir);
+	home = _getenvir("HOME", data_sh->_environ);
 
 	if (home == NULL)
 	{

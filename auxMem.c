@@ -1,4 +1,4 @@
-#include "simple_shell"
+#include "simple_shell.h"
 /**
  * _memcopy - copies information
  * @newptr: destnation poibter
@@ -6,7 +6,8 @@
  * @size: size of new pounter
  * Return: 0
  */
-void _memcopy(void *newptr, const coid *ptr, unsigned int size)
+void _memcopy(void *newptr, const void *ptr, unsigned int size)
+
 {
 	char *char_ptr = (char *)ptr;
 	char *char_newptr = (char *)newptr;
@@ -74,7 +75,7 @@ char **_reallocatedp(char **ptr, unsigned int old_size, unsigned int new_size)
 	if (newptr == NULL)
 		return (NULL);
 
-	for (i = 0; i < old_size, i++)
+	for (i = 0; i < old_size; i++)
 		newptr[i] = ptr[i];
 
 	free(ptr);

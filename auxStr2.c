@@ -71,7 +71,7 @@ char *_stringtok(char str[], const char *delim)
 
 	if (str != NULL)
 	{
-		if (cmpChars(str, delik))
+		if (cmpChars(str, delim))
 			return (NULL);
 		splitted = str; /*Store first address*/
 		i = _stringlen(str);
@@ -94,7 +94,7 @@ char *_stringtok(char str[], const char *delim)
 			{
 				*splitted = '\0';
 
-				if (splitted == atr_start)
+				if (splitted == str_start)
 					str_start++;
 				break;
 			}

@@ -115,8 +115,8 @@ void printSyntaxError(dataShell *data_sh, char *inp, int i, int bool)
 	msg2 = ": Syntax error: \"";
 	msg3 = "\" unexpected\n";
 	count = auxItoa(data_sh->count);
-	length = _stringLen(data_sh->argvec[0]) + _stringLen(count);
-	length += _stringLen(msg) + _stringLen(msg2) + _stringLen(msg3) + 2;
+	length = _stringlen(data_sh->argvec[0]) + _stringlen(count);
+	length += _stringlen(msg) + _stringlen(msg2) + _stringlen(msg3) + 2;
 
 	error = malloc(sizeof(char) * (length + 1));
 	if (error == 0)
