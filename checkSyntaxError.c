@@ -1,6 +1,6 @@
 #include "simple_shell.h"
 /**
- * repeatedChar - counts d repetitions of a char
+ * repeatedChar - To count repetitions of a char
  * @inp: input string
  * @i: index
  * Return: repetitions
@@ -143,7 +143,7 @@ void printSyntaxError(dataShell *data_sh, char *inp, int i, int bool)
  * @inp: inp string
  * Return: 1 if there is an error, 0 if not
  */
-int checkSyntxError(dataShell *data_sh, char *inp)
+int checkSyntaxError(dataShell *data_sh, char *inp)
 {
 	int begin = 0;
 	int f_char = 0;

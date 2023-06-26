@@ -1,7 +1,7 @@
 #include "simple_shell.h"
 
 /**
- * stringcatCd - The function that concatenates the message for cdir error
+ * stringcatCdir - The function that concatenates the message for cdir error
  *
  * @datash: relevant data (directory)
  * @msg: The message to print
@@ -10,7 +10,7 @@
  * Description - it prints an error message
  * Return: error message
  */
-char *stringcatCd(dataShell *datash, char *msg, char *error, char *ver_str)
+char *stringcatCdir(dataShell *datash, char *msg, char *error, char *ver_str)
 {
 	char *illegalFlag;
 
