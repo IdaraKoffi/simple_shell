@@ -1,6 +1,6 @@
 #include "simple_shell.h"
 /**
- * revString - reversesa string
+ * revString - a reversesa string
  * @s: input str
  * Return: none
  */

@@ -17,7 +17,7 @@ void _memcopy(void *newptr, const void *ptr, unsigned int size)
 		char_newptr[i] = char_ptr[i];
 }
 /**
- * _reallocate - reallocates a memory block
+ * _reallocate - To reallocate a memory block
  * @ptr: pointer to d memory prev allocated
  * @old_size: size in bytes of allocated space of ptr
  * @new_size: new size, in bytes, of the new memory block
@@ -52,7 +52,7 @@ void *_reallocate(void *ptr, unsigned int old_size, unsigned int new_size)
 	return (newptr);
 }
 /**
- * _reallocatedp - reallocates memory block of double pointer
+ * _reallocatedp - To reallocate memory block of double pointer
  * @ptr: double pointer
  * @old_size: size of allocated ptr space
  * @new_size: new size of new memory block
