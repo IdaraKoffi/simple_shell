@@ -25,7 +25,7 @@ seppList *addSepNodeEnd(seppList **head, char sep)
 	}
 	else
 	{
-		while (temo->nextNode != NULL)
+		while (temp->nextNode != NULL)
 			temp = temp->nextNode;
 		temp->nextNode = new;
 	}
@@ -69,7 +69,7 @@ lineeList *addLineNodeEnd(lineeList **head, char *line)
 	if (new == NULL)
 		return (NULL);
 
-	new->line = line;
+	new->line = cmline;
 	new->nextNode = NULL;
 	temp = *head;
 

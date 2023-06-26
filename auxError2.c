@@ -15,7 +15,7 @@ char *errorEnvir(dataShell *data_sh)
 	ver_str = auxItoa(data_sh->count);
 	msg = ":Unable to add/remove from environment\n";
 	length = _stringlen(data_sh->argvec[0]) + _stringlen(ver_str);
-	length += _stringlen(data_sh->args[0]) + _sringlen(msg) + 4;
+	length += _stringlen(data_sh->args[0]) + _stringlen(msg) + 4;
 	error = malloc(sizeof(char) * (length + 1));
 	if (error == 0)
 	{
