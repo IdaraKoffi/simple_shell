@@ -69,7 +69,7 @@ void cdirTo(dataShell *data_sh)
 	}
 
 	cp_pwd = _stringdup(pwd);
-	setEnvir("OLDPWD", cp_dir, data_sh);
+	setEnvir("OLDPWD", cp_pwd, data_sh);
 
 	cp_dir = _stringdup(dir);
 	setEnvir("PWD", cp_dir, data_sh);
