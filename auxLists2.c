@@ -9,7 +9,7 @@
  * @lval: length of the value
  * Return: address of the head
  */
-r_var *addRvarNode(r_var **head, int lvar, char *vvlue, int lval)
+r_var *addRvarNode(r_var **head, int lvar, char *vvalue, int lval)
 {
 	r_var *new, *temp;
 

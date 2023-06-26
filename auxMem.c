@@ -6,7 +6,8 @@
  * @size: size of new pounter
  * Return: 0
  */
-void _memcopy(void *newptr, const coid *ptr, unsigned int size)
+void _memcopy(void *newptr, const void *ptr, unsigned int size)
+
 {
 	char *char_ptr = (char *)ptr;
 	char *char_newptr = (char *)newptr;

@@ -174,7 +174,7 @@ int cmdExec(dataShell *data_sh)
 		return (1);
 	if (exec == 0)
 	{
-		dir = _which(data_sh->args[0], data_sh->_envir);
+		dir = _which(data_sh->args[0], data_sh->envir);
 		if (checkErrorCmd(dir, data_sh) == 1)
 			return (1);
 	}
@@ -183,10 +183,10 @@ int cmdExec(dataShell *data_sh)
 	if (pd == 0)
 	{
 		if (exec == 0)
-			dir = _which(data_sh->args[0], data_sh->_envir);
+			dir = _which(data_sh->args[0], data_sh->envir);
 		else
 			dir = data_sh->args[0];
-		execve(dir + exec, data_sh->args, data_sh->_envir);
+		execve(dir + exec, data_sh->args, data_sh->envir);
 	}
 	else if (pd < 0)
 	{
